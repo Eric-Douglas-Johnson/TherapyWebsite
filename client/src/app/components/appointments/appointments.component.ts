@@ -17,7 +17,7 @@ import { AppointmentService, Appointment } from '../../services/appointment.serv
         <label>Message<textarea [(ngModel)]="form.message" name="message"></textarea></label>
         <button type="submit">Submit</button>
       </form>
-      <p *ngIf="submitted">Thank you! We will be in touch shortly.</p>
+      @if (submitted) {<p>Thank you! We will be in touch shortly.</p>}
     </section>
   `
 })

@@ -1,0 +1,159 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #4a7c6f;
+  --primary-light: #6a9e8f;
+  --primary-dark: #2f5c51;
+  --accent: #d4a96a;
+  --bg: #f9f7f4;
+  --text: #2e2e2e;
+  --text-light: #666;
+  --white: #ffffff;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-weight: normal;
+}
+
+p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+/* Sections */
+section {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+}
+
+/* Links / Buttons */
+a[routerlink], button[type="submit"] {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+a[routerlink]:hover, button[type="submit"]:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 540px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+input, textarea {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--bg);
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+ul li {
+  padding: 0.75rem 1rem;
+  background: var(--bg);
+  border-left: 4px solid var(--primary);
+  border-radius: 4px;
+  color: var(--text);
+}
