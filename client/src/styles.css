@@ -28,7 +28,7 @@ body {
 nav {
   background-color: var(--white);
   box-shadow: var(--shadow);
-  padding: 1.2rem 2rem;
+  padding: 0.8rem 2rem;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -37,16 +37,50 @@ nav {
   z-index: 100;
 }
 
-nav a {
+nav .logo {
+  background: none;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+}
+
+nav .logo:hover {
+  background: none;
+}
+
+nav .logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background: #e0d8cf;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #998a7a;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav .nav-links a {
   text-decoration: none;
   color: var(--text);
   font-size: 1rem;
   letter-spacing: 0.03em;
   transition: color 0.2s;
+  background: none;
+  padding: 0;
 }
 
-nav a:hover {
+nav .nav-links a:hover {
   color: var(--primary);
+  background: none;
 }
 
 /* Main Content */
@@ -156,4 +190,108 @@ ul li {
   border-left: 4px solid var(--primary);
   border-radius: 4px;
   color: var(--text);
+}
+
+/* Hamburger Menu Button */
+nav .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+nav .menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* ========================
+   Responsive Breakpoints
+   ======================== */
+
+/* Tablet — max 768px */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.8rem 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding-top: 1rem;
+  }
+
+  nav .nav-links.open {
+    display: flex;
+  }
+
+  nav .nav-links a {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+  }
+
+  main {
+    padding: 2rem 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  section {
+    padding: 1.8rem;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
+
+/* Mobile — max 480px */
+@media (max-width: 480px) {
+  nav {
+    padding: 0.6rem 1rem;
+  }
+
+  nav .logo-placeholder {
+    width: 45px;
+    height: 45px;
+    font-size: 0.6rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 1.4rem;
+    border-radius: 8px;
+  }
+
+  a[routerlink], button[type="submit"] {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
 }
