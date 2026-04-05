@@ -14,7 +14,7 @@ interface AuthResponse {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private apiUrl = 'https://localhost:3443/api/auth';
+  private apiUrl = '/api/auth';
   private _loggedIn$ = new BehaviorSubject<boolean>(false);
   private _user$ = new BehaviorSubject<AuthUser | null>(null);
 

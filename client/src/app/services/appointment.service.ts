@@ -13,7 +13,7 @@ export interface Appointment {
 
 @Injectable({ providedIn: 'root' })
 export class AppointmentService {
-  private apiUrl = 'https://localhost:3443/api/appointments';
+  private apiUrl = '/api/appointments';
 
   constructor(private http: HttpClient) {}
 
