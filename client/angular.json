@@ -49,6 +49,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "ssl": true,
+            "sslKey": "../server/certs/key.pem",
+            "sslCert": "../server/certs/cert.pem"
+          },
           "configurations": {
             "production": {
               "buildTarget": "therapy-website-client:build:production"
